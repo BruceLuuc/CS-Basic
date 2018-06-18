@@ -36,6 +36,7 @@ public:
 	}
 };
 
+//优化空间
 class Solution_70_2 {
 public:
 	int climbStairs(int n) {
@@ -51,7 +52,7 @@ public:
 };
 
 
-//递归方法 时间超时 提交失败
+//递归方法 时间超时 
 class Solution_70_3 {
 public:
 	int climbStairs(int n) {
@@ -72,7 +73,26 @@ private:
 	}
 };
 
+//递归优化 记忆化搜索 提交成功beats96.86%
+class Solution_70_4 {
+public:
+	int climbStairs(int n) {
+		memo = vector<int>(n + 1, -1);
+		return steps(n);
+	}
+private:
+	vector<int>memo;
+	int steps(int n)
+	{
+		if (n==0||n == 1) 
+			return 1;
+		if(memo[n]==-1)
+			memo[n]= steps(n - 1) + steps(n - 2);
+		return memo[n];
+	}
+};
 
+//直接套公式
 //提交后beats率才2.21%，搞不懂。。。
 class Solution_70_4 {
 public:

@@ -120,6 +120,7 @@
     <ClCompile Include="102. Binary Tree Level Order Traversal.cpp" />
     <ClCompile Include="107. Binary Tree Level Order Traversal II.cpp" />
     <ClCompile Include="12. Integer to Roman.cpp" />
+    <ClCompile Include="120. Triangle.cpp" />
     <ClCompile Include="125. Valid Palindrome.cpp" />
     <ClCompile Include="128. Longest Consecutive Sequence.cpp" />
     <ClCompile Include="129. Sum Root to Leaf Numbers.cpp" />
@@ -139,6 +140,7 @@
     <ClCompile Include="16. 3Sum Closest.cpp" />
     <ClCompile Include="18. 4Sum.cpp" />
     <ClCompile Include="19. Remove Nth Node From End of List.cpp" />
+    <ClCompile Include="198. House Robber.cpp" />
     <ClCompile Include="20. Valid Parentheses.cpp" />
     <ClCompile Include="206. Reverse Linked List.cpp" />
     <ClCompile Include="24. Swap Nodes in Pairs.cpp" />
@@ -150,9 +152,11 @@
     <ClCompile Include="31. Next Permutation.cpp" />
     <ClCompile Include="32. Longest Valid Parentheses.cpp" />
     <ClCompile Include="33. Search in Rotated Sorted Array.cpp" />
+    <ClCompile Include="343. Integer Break.cpp" />
     <ClCompile Include="4. Median of Two Sorted Arrays.cpp" />
     <ClCompile Include="43. Multiply Strings.cpp" />
     <ClCompile Include="5. Longest Palindromic Substring.cpp" />
+    <ClCompile Include="53. Maximum Subarray.cpp" />
     <ClCompile Include="60. Permutation Sequence.cpp" />
     <ClCompile Include="61. Rotate List.cpp" />
     <ClCompile Include="62. Unique Paths.cpp" />
