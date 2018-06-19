@@ -11,13 +11,20 @@ public:
 		f[0] = 1;
 
 
-		for (int i = 0; i != m; ++i) {			
+		for (int i = 0; i != m; ++i) {
+			//先判断每一行的第一个
+			//if (obstacleGrid[i][0] == 1)
+			//	f[0] = 0;
+			//else
+			//	f[0] = f[0];
+
 			if (f[0] == 0)
-				f[0] = 0;//第一列若出现1则后面统统被挡住，不可到达，为0
+				f[0] = 0;
 			else if (obstacleGrid[i][0] == 1)
 				f[0] = 0;
 			else
 				f[0] = 1;
+
 
 			for (int j = 1; j != n; ++j) {
 				if (obstacleGrid[i][j] == 1)
@@ -30,7 +37,7 @@ public:
 	}
 };
 
-//优化一下
+//优化一下代码
 class Solution_63_2 {
 public:
 	int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
@@ -61,7 +68,6 @@ public:
 		const int n = obstacleGrid[0].size();
 		if (n <= 0)return 0;
 		if (obstacleGrid[0][0] || obstacleGrid[m - 1][n - 1])return 0;
-
 
 		int f[101][101];
 		f[0][0] = 1;
@@ -102,7 +108,7 @@ public:
 	}
 };
 
-//神搜  缓存
+//深搜  缓存
 class Solution_63_4 {
 public:
 	int uniquePathsWithObstacles(const vector<vector<int> >& obstacleGrid) {

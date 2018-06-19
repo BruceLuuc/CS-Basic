@@ -23,6 +23,7 @@ public:
 	}
 };
 
+
 //优化递归 记忆化搜索  beats100%
 class Solution_343_2 {
 private:
@@ -30,7 +31,6 @@ private:
 	int max3(int a, int b, int c) {
 		return max(a, max(b, c));
 	}
-
 
 	int breakInteger(int n) {
 		if (n == 1)return 1;
@@ -52,7 +52,7 @@ public:
 };
 
 
-//动态规划
+//动态规划 beats100%
 class Solution_343_3 {
 private:
 	int max3(int a, int b, int c) {

@@ -11,7 +11,7 @@
 因为比如：1.2e+12这种是科学计数法，表示1.2*(10^12)，所以e之前必须有数据．
 
 */
-class Solution {
+class Solution_1 {
 public:
 	bool isNumber(string s) {
 		//i记位，k统计数字

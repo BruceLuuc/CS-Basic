@@ -19,6 +19,7 @@ public:
 	}
 };
 
+//优化空间，奇偶数跳着向前走
 class Solution_198_2 {
 public:
 	int rob(vector<int>&nums) {

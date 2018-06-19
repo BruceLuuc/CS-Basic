@@ -94,7 +94,7 @@ private:
 
 //直接套公式
 //提交后beats率才2.21%，搞不懂。。。
-class Solution_70_4 {
+class Solution_70_5 {
 public:
 	int climbStairs(int n) {
 		const double s = sqrt(5);

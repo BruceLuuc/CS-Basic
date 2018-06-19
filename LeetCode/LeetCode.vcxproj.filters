@@ -210,5 +210,17 @@
     <ClCompile Include="343. Integer Break.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="91. Decode Ways.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="279. Perfect Squares.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="300. Longest Increasing Subsequence.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="416. Partition Equal Subset Sum.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

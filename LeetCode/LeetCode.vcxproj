@@ -147,13 +147,16 @@
     <ClCompile Include="25. Reverse Nodes in k-Group.cpp" />
     <ClCompile Include="26. Remove Duplicates from Sorted Array.cpp" />
     <ClCompile Include="27. Remove Element.cpp" />
+    <ClCompile Include="279. Perfect Squares.cpp" />
     <ClCompile Include="28. Implement strStr().cpp" />
     <ClCompile Include="2_Add_Two_Numbers.cpp" />
+    <ClCompile Include="300. Longest Increasing Subsequence.cpp" />
     <ClCompile Include="31. Next Permutation.cpp" />
     <ClCompile Include="32. Longest Valid Parentheses.cpp" />
     <ClCompile Include="33. Search in Rotated Sorted Array.cpp" />
     <ClCompile Include="343. Integer Break.cpp" />
     <ClCompile Include="4. Median of Two Sorted Arrays.cpp" />
+    <ClCompile Include="416. Partition Equal Subset Sum.cpp" />
     <ClCompile Include="43. Multiply Strings.cpp" />
     <ClCompile Include="5. Longest Palindromic Substring.cpp" />
     <ClCompile Include="53. Maximum Subarray.cpp" />
@@ -175,6 +178,7 @@
     <ClCompile Include="86. Partition List.CPP" />
     <ClCompile Include="89. Gray Code.cpp" />
     <ClCompile Include="9. Palindrome Number.cpp" />
+    <ClCompile Include="91. Decode Ways.cpp" />
     <ClCompile Include="92. Reverse Linked List II.cpp" />
     <ClCompile Include="94. Binary Tree Inorder Traversal.cpp" />
     <ClCompile Include="95. Unique Binary Search Trees II.cpp" />
