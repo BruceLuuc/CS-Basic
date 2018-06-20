@@ -87,11 +87,7 @@ int main_300() {
 	vector<int>b = {10,9,2,2,5,98,3,3,4,4};
 	vector<int>c = { 10,9,2,5,3,3,3,3,4,4,4,87,87,5,5,6 };
 
-
 	cout << A.lengthOfLIS(c)<<endl;
-
-
-
 
 	system("pause");
 	return 0;

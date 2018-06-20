@@ -25,7 +25,6 @@ public:
 
 		memo = vector<vector<int>>(nums.size(), vector<int>(sum / 2 + 1, -1));
 		return tryPartition(nums, nums.size()-1, sum / 2);
-
 	}
 };
 
