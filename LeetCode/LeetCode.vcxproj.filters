@@ -222,5 +222,23 @@
     <ClCompile Include="416. Partition Equal Subset Sum.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="104. Maximum Depth of Binary Tree.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="226. Invert Binary Tree.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="112. Path Sum.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="257. Binary Tree Paths.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="437. Path Sum III.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="235. Lowest Common Ancestor of a Binary Search Tree.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

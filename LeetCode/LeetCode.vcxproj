@@ -118,7 +118,9 @@
   <ItemGroup>
     <ClCompile Include="10. Regular Expression Matching.cpp" />
     <ClCompile Include="102. Binary Tree Level Order Traversal.cpp" />
+    <ClCompile Include="104. Maximum Depth of Binary Tree.cpp" />
     <ClCompile Include="107. Binary Tree Level Order Traversal II.cpp" />
+    <ClCompile Include="112. Path Sum.cpp" />
     <ClCompile Include="12. Integer to Roman.cpp" />
     <ClCompile Include="120. Triangle.cpp" />
     <ClCompile Include="125. Valid Palindrome.cpp" />
@@ -143,8 +145,11 @@
     <ClCompile Include="198. House Robber.cpp" />
     <ClCompile Include="20. Valid Parentheses.cpp" />
     <ClCompile Include="206. Reverse Linked List.cpp" />
+    <ClCompile Include="226. Invert Binary Tree.cpp" />
+    <ClCompile Include="235. Lowest Common Ancestor of a Binary Search Tree.cpp" />
     <ClCompile Include="24. Swap Nodes in Pairs.cpp" />
     <ClCompile Include="25. Reverse Nodes in k-Group.cpp" />
+    <ClCompile Include="257. Binary Tree Paths.cpp" />
     <ClCompile Include="26. Remove Duplicates from Sorted Array.cpp" />
     <ClCompile Include="27. Remove Element.cpp" />
     <ClCompile Include="279. Perfect Squares.cpp" />
@@ -158,6 +163,7 @@
     <ClCompile Include="4. Median of Two Sorted Arrays.cpp" />
     <ClCompile Include="416. Partition Equal Subset Sum.cpp" />
     <ClCompile Include="43. Multiply Strings.cpp" />
+    <ClCompile Include="437. Path Sum III.cpp" />
     <ClCompile Include="5. Longest Palindromic Substring.cpp" />
     <ClCompile Include="53. Maximum Subarray.cpp" />
     <ClCompile Include="60. Permutation Sequence.cpp" />
