@@ -240,5 +240,11 @@
     <ClCompile Include="235. Lowest Common Ancestor of a Binary Search Tree.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="堆_快排.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="排序算法总结.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
