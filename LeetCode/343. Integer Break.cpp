@@ -1,6 +1,6 @@
 #include"x.h"
 
-//µİ¹é Ê±¼ä³¬Ê± Ìá½»Ê§°Ü
+//é€’å½’ æ—¶é—´è¶…æ—¶ æäº¤å¤±è´¥
 class Solution_343_1 {
 private:
 	int max3(int a, int b, int c) {
@@ -12,7 +12,7 @@ private:
 		int res = -1;
 
 		for (int i = 1; i!= n; ++i)
-			//ÖÁÉÙ·Ö¸î³ÉÁ½¸ö²¿·Ö ²»Òª¶ªµôi*(n-i)£¬n-i²»·Ö¸î
+			//è‡³å°‘åˆ†å‰²æˆä¸¤ä¸ªéƒ¨åˆ† ä¸è¦ä¸¢æ‰i*(n-i)ï¼Œn-iä¸åˆ†å‰²
 			res=max3(res,i*(n-i),i*breakInteger(n - i));
 		return res;
 	}
@@ -24,7 +24,7 @@ public:
 };
 
 
-//ÓÅ»¯µİ¹é ¼ÇÒä»¯ËÑË÷  beats100%
+//ä¼˜åŒ–é€’å½’ è®°å¿†åŒ–æœç´¢  beats100%
 class Solution_343_2 {
 private:
 	vector<int>memo;
@@ -52,7 +52,7 @@ public:
 };
 
 
-//¶¯Ì¬¹æ»® beats100%
+//åŠ¨æ€è§„åˆ’ beats100%
 class Solution_343_3 {
 private:
 	int max3(int a, int b, int c) {
@@ -68,7 +68,7 @@ public:
 
 		int res = -1;
 		for (int i = 3; i <= n; ++i) {
-			//for(int j = 1; j!= i; ++j)ÓÅ»¯ ±éÀúÒ»°ë¼´¿É
+			//for(int j = 1; j!= i; ++j)ä¼˜åŒ– éå†ä¸€åŠå³å¯
 			for (int j = 1; j != i/2+1; ++j) {
 				res = max3(res, j*(i - j), j*memo[i - j]);				
 			}

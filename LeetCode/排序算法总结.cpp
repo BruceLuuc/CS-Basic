@@ -315,6 +315,7 @@ int main2() {
 花费一晚上，集中时间把排序算法梳理了一遍，参考资料如下：
 [1]  Mark Allen Weiss. 数据结构与算法分析 C++描述(第3版)[M]. 人民邮电出版社, 2007.
 [2]  Adam Drozdek. C++数据结构与算法(第4版)[M]. 清华大学出版社, 2014.
-[3]  常用排序算法总结(一) http://www.cnblogs.com/eniac12/p/5329396.html#s5
-[4]  常用排序算法总结(二) http://www.cnblogs.com/eniac12/p/5332117.html
+[3]  维基百科.排序算法.
+[4]  常用排序算法总结(一) http://www.cnblogs.com/eniac12/p/5329396.html#s5
+[5]  常用排序算法总结(二) http://www.cnblogs.com/eniac12/p/5332117.html
 */
