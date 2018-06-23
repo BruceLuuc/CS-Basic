@@ -73,10 +73,10 @@ void selectionSort(vector<T>&a){
 	for (int i = 0; i != n - 1; ++i){
 		int minIndex = i;
 		for (int j = i + 1; j != n; ++j)
-			if (arr[j] < arr[minIndex])
+			if (a[j] < a[minIndex])
 				minIndex = j;
 		if (i != minIndex)//减少自身交换
-			swap(arr[i], arr[minIndex]);
+			swap(a[i], a[minIndex]);
 	}
 }
 
