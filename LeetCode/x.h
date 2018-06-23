@@ -9,6 +9,7 @@ using std::ios;
 using std::setw;
 using std::fill;
 using std::fill_n;
+using std::copy;
 
 #include<vector>
 using std::vector;

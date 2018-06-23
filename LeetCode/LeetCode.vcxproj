@@ -194,6 +194,9 @@
     <ClCompile Include="堆_快排.cpp" />
     <ClCompile Include="排序算法总结.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SortTestHelper.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
