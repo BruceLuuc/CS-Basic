@@ -114,7 +114,7 @@ void insertionSort(vector<T>&a) {
 //可能有更好的增量
 template<typename T>
 void ShellSort(vector<T>&a) {
-	for (int gap = a.size() / 2; gap != 0; --gap) {
+	for (int gap = a.size() / 2; gap != 0; gap/=2) {
 		for (int i = gap; i<a.size(); i++) {
 			T tmp = a[i];
 			int j=i;
