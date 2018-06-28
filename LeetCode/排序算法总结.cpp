@@ -1,10 +1,10 @@
-#include "SortTestHelper.h"
+﻿#include "SortTestHelper.h"
 
 
 //sort.cpp
 
-//冒泡排序 稳定 O(N^2)
-//把最大的沉到数组末尾
+//鍐掓场鎺掑簭 绋冲畾 O(N^2)
+//鎶婃渶澶х殑娌夊埌鏁扮粍鏈熬
 template<typename T>
 void Bubble_Sort(vector<T>&a) {
 	int len = a.size();
@@ -14,7 +14,7 @@ void Bubble_Sort(vector<T>&a) {
 			if (a[j] > a[j + 1])
 				swap(a[j], a[j + 1]);
 }
-//把最小的浮出到数组开头
+//鎶婃渶灏忕殑娴嚭鍒版暟缁勫紑澶?
 template<typename T>
 void BubbleSort(vector<T>&a) {
 	int len = a.size();
@@ -24,19 +24,19 @@ void BubbleSort(vector<T>&a) {
 			if (a[j] < a[j - 1])
 				swap(a[j], a[j - 1]);
 }
-//冒泡排序的改进：鸡尾酒排序
+//鍐掓场鎺掑簭鐨勬敼杩涳細楦″熬閰掓帓搴?
 template<typename T>
 void CocktailSort(vector<T>&a) {
 	int left = 0;
 	int right = a.size() - 1;
 	while (left < right) {
-		// 前半轮,将最大元素放到后面
+		// 鍓嶅崐杞?灏嗘渶澶у厓绱犳斁鍒板悗闈?
 		for (int i = left; i < right; i++) {
 			if (a[i] > a[i + 1])
 				swap(a[i], a[i + 1]);
 		}
 		right--;
-		// 后半轮,将最小元素放到前面
+		// 鍚庡崐杞?灏嗘渶灏忓厓绱犳斁鍒板墠闈?
 		for (int i = right; i > left; i--) {
 			if (a[i - 1] > a[i])
 				swap(a[i - 1], a[i]);
@@ -59,7 +59,7 @@ void CocktailSort(vector<T>&a) {
 
 
 
-//选择排序 O(N^2) 不稳定
+//閫夋嫨鎺掑簭 O(N^2) 涓嶇ǔ瀹?
 template<typename T>
 void selectionSort(vector<T>&a) {
 	int n = a.size();
@@ -68,7 +68,7 @@ void selectionSort(vector<T>&a) {
 		for (int j = i + 1; j != n; ++j)
 			if (a[j] < a[minIndex])
 				minIndex = j;
-		if (i != minIndex)//减少自身交换
+		if (i != minIndex)//鍑忓皯鑷韩浜ゆ崲
 			swap(a[i], a[minIndex]);
 	}
 }
@@ -88,11 +88,11 @@ void selectionSort(vector<T>&a) {
 
 
 
-//插入排序 平均O(N^2) 稳定
-//填坑，把前面比他大的排好序的元素依次往后移动一个元素
-//直到遇到前面一个数比他小 然后把i插入坑里面
-//如果输入数据预先排序，运行时间为O(N），因为内层循环的检测总是立即判定不成立而终止。
-//用于少量元素的排序
+//鎻掑叆鎺掑簭 骞冲潎O(N^2) 绋冲畾
+//濉潙锛屾妸鍓嶉潰姣斾粬澶х殑鎺掑ソ搴忕殑鍏冪礌渚濇寰€鍚庣Щ鍔ㄤ竴涓厓绱?
+//鐩村埌閬囧埌鍓嶉潰涓€涓暟姣斾粬灏?鐒跺悗鎶奿鎻掑叆鍧戦噷闈?
+//濡傛灉杈撳叆鏁版嵁棰勫厛鎺掑簭锛岃繍琛屾椂闂翠负O(N锛夛紝鍥犱负鍐呭眰寰幆鐨勬娴嬫€绘槸绔嬪嵆鍒ゅ畾涓嶆垚绔嬭€岀粓姝€?
+//鐢ㄤ簬灏戦噺鍏冪礌鐨勬帓搴?
 template<typename T>
 void insertionSort(vector<T>&a) {
 	for (int i = 1; i<a.size(); i++) {
@@ -103,9 +103,9 @@ void insertionSort(vector<T>&a) {
 		a[j] = tmp;
 	}
 }
-//插入排序的高效改进：希尔排序(Shell Sort)
-//不稳定
-//可能有更好的增量
+//鎻掑叆鎺掑簭鐨勯珮鏁堟敼杩涳細甯屽皵鎺掑簭(Shell Sort)
+//涓嶇ǔ瀹?
+//鍙兘鏈夋洿濂界殑澧為噺
 template<typename T>
 void ShellSort(vector<T>&a) {
 	for (int gap = a.size() / 2; gap != 0; gap /= 2) {
@@ -129,10 +129,10 @@ void ShellSort(vector<T>&a) {
 
 
 
-//归并排序(Merge Sort) 稳定
-//最差时间复杂度 ---- O(N*logN)
-//最优时间复杂度 ---- O(N*logN)
-//平均时间复杂度 ---- O(N*logN)
+//褰掑苟鎺掑簭(Merge Sort) 绋冲畾
+//鏈€宸椂闂村鏉傚害 ---- O(N*logN)
+//鏈€浼樻椂闂村鏉傚害 ---- O(N*logN)
+//骞冲潎鏃堕棿澶嶆潅搴?---- O(N*logN)
 template <typename T>
 void merge(vector<T> & a, vector<T> & tmpArray, int leftPos, int rightPos, int rightEnd) {
 	int leftEnd = rightPos - 1;
@@ -158,7 +158,7 @@ void merge(vector<T> & a, vector<T> & tmpArray, int leftPos, int rightPos, int r
 }
 template<typename T>
 void mergeSort(vector<T>&a, vector<T>&tmpArray, int left, int right) {
-	if (left == right) return;// 当待排序的序列长度为1时，递归开始回溯，进行merge操作
+	if (left == right) return;// 褰撳緟鎺掑簭鐨勫簭鍒楅暱搴︿负1鏃讹紝閫掑綊寮€濮嬪洖婧紝杩涜merge鎿嶄綔
 
 	int center = (left + right) / 2;
 	mergeSort(a, tmpArray, left, center);
@@ -188,7 +188,7 @@ void mergeSort(vector<T>&a) {
 
 
 
-//堆排序(Heap Sort) 不稳定
+//鍫嗘帓搴?Heap Sort) 涓嶇ǔ瀹?
 //O(N*logN)
 template<typename T>
 void __shiftDown(vector<T>&a, int n, int k) {
@@ -223,14 +223,14 @@ void heapSort(vector<T>&a) {
 
 
 
-//快速排序(Quick Sort) 不稳定
-// 最差 ---- 每次选取的基准都是最大（或最小）的元素
-//导致每次只划分出了一个分区，需要进行n-1次划分才能结束递归，时间复杂度为O(N^2)
+//蹇€熸帓搴?Quick Sort) 涓嶇ǔ瀹?
+// 鏈€宸?---- 姣忔閫夊彇鐨勫熀鍑嗛兘鏄渶澶э紙鎴栨渶灏忥級鐨勫厓绱?
+//瀵艰嚧姣忔鍙垝鍒嗗嚭浜嗕竴涓垎鍖猴紝闇€瑕佽繘琛宯-1娆″垝鍒嗘墠鑳界粨鏉熼€掑綊锛屾椂闂村鏉傚害涓篛(N^2)
 
-//最优 ---- 每次选取的基准都是中位数,这样每次都均匀的划分出两个分区
-//只需要logN次划分就能结束递归，时间复杂度为O(N*logN)
+//鏈€浼?---- 姣忔閫夊彇鐨勫熀鍑嗛兘鏄腑浣嶆暟,杩欐牱姣忔閮藉潎鍖€鐨勫垝鍒嗗嚭涓や釜鍒嗗尯
+//鍙渶瑕乴ogN娆″垝鍒嗗氨鑳界粨鏉熼€掑綊锛屾椂闂村鏉傚害涓篛(N*logN)
 
-//平均时间复杂度 ---- O(N*logN)
+//骞冲潎鏃堕棿澶嶆潅搴?---- O(N*logN)
 template<typename T>
 void insertionSort(vector<T>&a, int left, int right) {
 	for (int i = left + 1; i <= right; i++) {
@@ -262,7 +262,7 @@ void quickSort(vector<T>&a, int left, int right) {
 			if (i < j)swap(a[i], a[j]);
 			else break;
 		}
-		swap(a[i], a[right - 1]);//把主元放到分界线
+		swap(a[i], a[right - 1]);//鎶婁富鍏冩斁鍒板垎鐣岀嚎
 		quickSort(a, left, i - 1);
 		quickSort(a, i + 1, right);
 	}
@@ -279,12 +279,12 @@ void quickSort(vector<T>&a) {
 
 
 
-//测试
-int main() {
+//娴嬭瘯
+int main_() {
 
 	int n = 10000;
 	
-	//一般性测试
+	//涓€鑸€ф祴璇?
 	cout << "Test for Random Array, size = " << n << ", random range [0, " << n << "]" << endl;
 	vector<int> a = SortTestHelper::generateRandomArray(n, 0, n);
 	vector<int> b(a);
@@ -308,7 +308,7 @@ int main() {
 		
 
 	
-	//近乎有序
+	//杩戜箮鏈夊簭
 	int swapTimes = 100;
 	cout << "Test for Random Nearly Ordered Array, size = " << n << ", swap times = " << swapTimes << endl;
 	a = SortTestHelper::generateNearlyOrderedArray(n, swapTimes);
@@ -325,7 +325,7 @@ int main() {
 	cout << endl;
 
 
-	//选取[0,10]区间上的数构成大量重复随机数组
+	//閫夊彇[0,10]鍖洪棿涓婄殑鏁版瀯鎴愬ぇ閲忛噸澶嶉殢鏈烘暟缁?
 	cout << "Test for Volume Duplicate Random Number, size = " << n << ", Number range [0,10]."  << endl;
 	a = SortTestHelper::generateRandomArray(n, 0, 10);
 	b = c = d = e = f = g = m = a;
@@ -349,8 +349,8 @@ int main() {
 
 
 /*
-测试结果(Realease版本x64):
-数据量十万.
+娴嬭瘯缁撴灉(Realease鐗堟湰x64):
+鏁版嵁閲忓崄涓?
 Test for Random Array, size = 100000, random range [0, 100000]
 Bubble_Sort : 11.887 s.
 BubbleSort : 11.365 s.
@@ -386,8 +386,8 @@ quickSort : 0.337 s.
 
 
 
-测试结果(Realease版本x64):
-数据量一万.
+娴嬭瘯缁撴灉(Realease鐗堟湰x64):
+鏁版嵁閲忎竴涓?
 Test for Random Array, size = 10000, random range [0, 10000]
 Bubble_Sort : 0.134 s.
 BubbleSort : 0.101 s.
@@ -423,8 +423,8 @@ quickSort : 0.004 s.
 
 
 
-测试结果(Debug版本x86):
-数据量一万.
+娴嬭瘯缁撴灉(Debug鐗堟湰x86):
+鏁版嵁閲忎竴涓?
 Test for Random Array, size = 10000, random range [0, 10000]
 Bubble_Sort : 24.096 s.
 BubbleSort : 24.303 s.
@@ -463,10 +463,10 @@ quickSort : 0.671 s.
 
 
 
-花费一晚上，集中时间把排序算法梳理了一遍，参考资料如下：
-[1]  Mark Allen Weiss. 数据结构与算法分析 C++描述(第3版)[M]. 人民邮电出版社, 2007.
-[2]  Adam Drozdek. C++数据结构与算法(第4版)[M]. 清华大学出版社, 2014.
-[3]  维基百科.排序算法.
-[4]  常用排序算法总结(一) http://www.cnblogs.com/eniac12/p/5329396.html#s5
-[5]  常用排序算法总结(二) http://www.cnblogs.com/eniac12/p/5332117.html
+鑺辫垂涓€鏅氫笂锛岄泦涓椂闂存妸鎺掑簭绠楁硶姊崇悊浜嗕竴閬嶏紝鍙傝€冭祫鏂欏涓嬶細
+[1]  Mark Allen Weiss. 鏁版嵁缁撴瀯涓庣畻娉曞垎鏋?C++鎻忚堪(绗?鐗?[M]. 浜烘皯閭數鍑虹増绀? 2007.
+[2]  Adam Drozdek. C++鏁版嵁缁撴瀯涓庣畻娉?绗?鐗?[M]. 娓呭崕澶у鍑虹増绀? 2014.
+[3]  缁村熀鐧剧.鎺掑簭绠楁硶.
+[4]  甯哥敤鎺掑簭绠楁硶鎬荤粨(涓€) http://www.cnblogs.com/eniac12/p/5329396.html#s5
+[5]  甯哥敤鎺掑簭绠楁硶鎬荤粨(浜? http://www.cnblogs.com/eniac12/p/5332117.html
 */
