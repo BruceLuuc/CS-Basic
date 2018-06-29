@@ -255,6 +255,9 @@
     <ClCompile Include="106. Construct Binary Tree from Inorder and Postorder Traversal.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="113. Path Sum II.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SortTestHelper.h">

@@ -123,6 +123,7 @@
     <ClCompile Include="106. Construct Binary Tree from Inorder and Postorder Traversal.cpp" />
     <ClCompile Include="107. Binary Tree Level Order Traversal II.cpp" />
     <ClCompile Include="112. Path Sum.cpp" />
+    <ClCompile Include="113. Path Sum II.cpp" />
     <ClCompile Include="12. Integer to Roman.cpp" />
     <ClCompile Include="120. Triangle.cpp" />
     <ClCompile Include="125. Valid Palindrome.cpp" />
