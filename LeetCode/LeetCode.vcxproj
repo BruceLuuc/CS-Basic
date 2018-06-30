@@ -141,6 +141,8 @@
     <ClCompile Include="144. Binary Tree Preorder Traversal.cpp" />
     <ClCompile Include="145. Binary Tree Postorder Traversal.cpp" />
     <ClCompile Include="146. LRU Cache.cpp" />
+    <ClCompile Include="147. Insertion Sort List.cpp" />
+    <ClCompile Include="148. Sort List.cpp" />
     <ClCompile Include="15. 3Sum.cpp" />
     <ClCompile Include="16. 3Sum Closest.cpp" />
     <ClCompile Include="18. 4Sum.cpp" />
@@ -148,7 +150,9 @@
     <ClCompile Include="198. House Robber.cpp" />
     <ClCompile Include="20. Valid Parentheses.cpp" />
     <ClCompile Include="206. Reverse Linked List.cpp" />
+    <ClCompile Include="21. Merge Two Sorted Lists.cpp" />
     <ClCompile Include="226. Invert Binary Tree.cpp" />
+    <ClCompile Include="23. Merge k Sorted Lists.cpp" />
     <ClCompile Include="235. Lowest Common Ancestor of a Binary Search Tree.cpp" />
     <ClCompile Include="24. Swap Nodes in Pairs.cpp" />
     <ClCompile Include="25. Reverse Nodes in k-Group.cpp" />
@@ -186,6 +190,7 @@
     <ClCompile Include="83. Remove Duplicates from Sorted List.cpp" />
     <ClCompile Include="836. Rectangle Overlap.cpp" />
     <ClCompile Include="86. Partition List.CPP" />
+    <ClCompile Include="88. Merge Sorted Array.cpp" />
     <ClCompile Include="89. Gray Code.cpp" />
     <ClCompile Include="9. Palindrome Number.cpp" />
     <ClCompile Include="91. Decode Ways.cpp" />

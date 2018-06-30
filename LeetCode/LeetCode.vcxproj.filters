@@ -258,6 +258,21 @@
     <ClCompile Include="113. Path Sum II.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="88. Merge Sorted Array.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="21. Merge Two Sorted Lists.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="23. Merge k Sorted Lists.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="148. Sort List.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="147. Insertion Sort List.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SortTestHelper.h">
