@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include<cassert>
 #include<windows.h>
 #include<iostream>
@@ -61,6 +61,7 @@ using std::stringstream;
 struct ListNode {
 	int val;
 	ListNode *next;
+	ListNode() : val(-1), next(NULL) {}
 	ListNode(int x) : val(x), next(NULL) {}
 	ListNode(int x, ListNode *p) : val(x), next(p) {}
 };

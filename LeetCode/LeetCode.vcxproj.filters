@@ -243,9 +243,6 @@
     <ClCompile Include="堆_快排.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="排序算法总结.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="766. Toeplitz Matrix.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -271,6 +268,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="147. Insertion Sort List.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="排序算法.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

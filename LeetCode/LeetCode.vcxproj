@@ -78,6 +78,9 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
+    <Link>
+      <StackReserveSize>100000</StackReserveSize>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -99,6 +102,7 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <StackReserveSize>100000</StackReserveSize>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -201,7 +205,7 @@
     <ClCompile Include="x.h" />
     <ClCompile Include="_test.cpp" />
     <ClCompile Include="堆_快排.cpp" />
-    <ClCompile Include="排序算法总结.cpp" />
+    <ClCompile Include="排序算法.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SortTestHelper.h" />
