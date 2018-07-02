@@ -206,13 +206,62 @@ void heapSort(vector<T>&a) {
 	//heapify
 	int n = a.size();
 	for (int i = (n - 1) / 2; i >= 0; i--)
-		__shiftDown(a, n, i);
+		__shiftDown(a, n, i); //对n个元素heapify,每次shiftDown第i个元素
 	for (int i = n - 1; i > 0; i--) {
 		swap(a[0], a[i]);
-		__shiftDown(a, i, 0);
+		__shiftDown(a, i, 0);//只对前i个元素heapify，交换之后，shiftDown第[0]个元素
 	}
 }
 
+
+//方法二：调用STL中的堆
+template<typename T>
+void heapSTL(vector<T>&a) {
+	if (!is_heap(a.begin(), a.end()))
+		make_heap(a.begin(), a.end());
+
+	//比自己写的稍快，但比sort_heap慢
+	//pop_heap每一次操作把头部最大值移动到最后，剩余的保证堆
+	for (auto i = a.end(); i != a.begin();--i) {
+		pop_heap(a.begin(), i);
+	}
+
+	//最快，比系统sort快
+	//sort_heap(a.begin(), a.end());
+
+	//最慢
+	//for (int i = a.size() - 1; i > 0; i--) {
+	//	swap(a[0], a[i]);
+	//	make_heap(a.begin(), a.begin()+i);
+	//}
+}
+
+int main() {
+
+	int n = 50000;
+
+	//一般性测试
+	cout << "Test for Random Array, size = " << n << ", random range [0, " << n << "]" << endl;
+	vector<int> a = SortTestHelper::generateRandomArray(n, 0, n);
+	vector<int>g(a);
+	vector<int>h(a);
+	vector<int>b(a);
+
+	clock_t startTime = clock();
+	sort(b.begin(),b.end());
+	clock_t endTime = clock();
+	cout << "系统sort : " << double(endTime - startTime) / CLOCKS_PER_SEC << " s." << endl;
+
+	SortTestHelper::testSort("mergeSort", mergeSort, g);
+	SortTestHelper::testSort("heapSort", heapSort, h);
+
+	//SortTestHelper::printArray(a); cout << endl;
+	SortTestHelper::testSort("heapSTL", heapSTL, a); cout<<endl;
+	//SortTestHelper::printArray(a); cout << endl;
+
+	while (1);
+	return 0;
+}
 
 
 
@@ -365,7 +414,7 @@ void bucketSort(vector<int>&a) {
 	}
 }
 //测试
-int main() {
+int _main_sort() {
 
 	int n = 1000;
 

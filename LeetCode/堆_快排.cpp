@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<cassert>
 #include<algorithm>
 #include<ctime>
@@ -6,7 +6,9 @@
 #include <cmath>
 #include<vector>
 using namespace std;
-//EÅÌÊÓÆµ½Ì³Ì ÕûÀí
+//Eç›˜è§†é¢‘æ•™ç¨‹ æ•´ç†
+
+//æ ¹èŠ‚ç‚¹ä»1
 template<typename T>
 class MaxHeap {
 public:
@@ -136,7 +138,7 @@ private:
 };
 
 
-//Ê¹ÓÃ¶ÑÅÅĞò
+//ä½¿ç”¨å †æ’åº
 template<typename T>
 void heapSort1(vector<T>&a) {
 	MaxHeap<T>heap(a.size());
@@ -152,7 +154,7 @@ void heapSort2(vector<T>&a) {
 		a[i] = heap.extractMax();
 }
 
-//Ô­µØ¶ÑÅÅĞò
+//åŸåœ°å †æ’åº
 template<typename T>
 void __shiftDown(vector<T>&a,int n, int k) {
 	while (2 * k+1 < n) {
@@ -184,12 +186,12 @@ void heapSort(vector<T>&a) {
 
 
 
-//¿ìËÙÅÅĞò
-//·µ»ØP£¬Ê¹µÃa[l,¡­¡­,p-1]<a[p];a[p+1,¡­¡­,r]>a[p]
+//å¿«é€Ÿæ’åº
+//è¿”å›Pï¼Œä½¿å¾—a[l,â€¦â€¦,p-1]<a[p];a[p+1,â€¦â€¦,r]>a[p]
 template<typename T>
 int __partition(vector<T>&a, int l, int r) {
 	swap(a[l], a[rand() % (r - l + 1) + l]);
-	T v = a[l];//Ñ¡µÚÒ»¸öÎªÊàÅ¦
+	T v = a[l];//é€‰ç¬¬ä¸€ä¸ªä¸ºæ¢çº½
 	int j = l;
 	for (int i = l + 1; i <= r; i++) {
 		if (a[i] < v)
@@ -232,7 +234,7 @@ int main1() {
 		cout << heap.extractMax() << "  ";
 	}
 
-	cout <<endl<< "²âÊÔ¶ÑÅÅĞò£º" << endl;
+	cout <<endl<< "æµ‹è¯•å †æ’åºï¼š" << endl;
 	vector<int>x;
 	for (int i = 0; i < 15; i++)
 		x.push_back(rand() % 100);

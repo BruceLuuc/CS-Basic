@@ -14,6 +14,11 @@ using std::copy;
 #include<vector>
 using std::vector;
 
+//#include<heapapi.h>
+//using std::is_heap;
+//using std::make_heap;
+//using std::pop_heap;
+
 #include<string>
 using std::string;
 
