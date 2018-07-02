@@ -213,7 +213,6 @@ void heapSort(vector<T>&a) {
 	}
 }
 
-
 //方法二：调用STL中的堆
 template<typename T>
 void heapSTL(vector<T>&a) {
@@ -236,32 +235,8 @@ void heapSTL(vector<T>&a) {
 	//}
 }
 
-int main() {
 
-	int n = 50000;
 
-	//一般性测试
-	cout << "Test for Random Array, size = " << n << ", random range [0, " << n << "]" << endl;
-	vector<int> a = SortTestHelper::generateRandomArray(n, 0, n);
-	vector<int>g(a);
-	vector<int>h(a);
-	vector<int>b(a);
-
-	clock_t startTime = clock();
-	sort(b.begin(),b.end());
-	clock_t endTime = clock();
-	cout << "系统sort : " << double(endTime - startTime) / CLOCKS_PER_SEC << " s." << endl;
-
-	SortTestHelper::testSort("mergeSort", mergeSort, g);
-	SortTestHelper::testSort("heapSort", heapSort, h);
-
-	//SortTestHelper::printArray(a); cout << endl;
-	SortTestHelper::testSort("heapSTL", heapSTL, a); cout<<endl;
-	//SortTestHelper::printArray(a); cout << endl;
-
-	while (1);
-	return 0;
-}
 
 
 
@@ -412,11 +387,16 @@ void bucketSort(vector<int>&a) {
 		a[i] = merge->val;
 		merge = merge->next;
 	}
+	delete p;
 }
-//测试
-int _main_sort() {
 
-	int n = 1000;
+
+
+
+//测试
+int main() {
+
+	int n = 100000;
 
 	//一般性测试
 	cout << "Test for Random Array, size = " << n << ", random range [0, " << n << "]" << endl;
@@ -429,17 +409,32 @@ int _main_sort() {
 	vector<int> g(a);
 	vector<int> h(a);
 	vector<int> m(a);
-	vector<int> mm(a);
-	SortTestHelper::testSort("Bubble_Sort", Bubble_Sort, a);
+	vector<int> x(a);
+	vector<int> y(a);
+	vector<int> z(a);
+	//SortTestHelper::testSort("Bubble_Sort", Bubble_Sort, a);
 	//SortTestHelper::testSort("BubbleSort", BubbleSort, b);
 	//SortTestHelper::testSort("CocktailSort", CocktailSort, c);
 	//SortTestHelper::testSort("selectionSort", selectionSort, d);
 	//SortTestHelper::testSort("insertionSort", insertionSort, e);
-	//SortTestHelper::testSort("ShellSort", ShellSort, f);
-	//SortTestHelper::testSort("mergeSort", mergeSort, g);
-	//SortTestHelper::testSort("heapSort", heapSort, h);
+	SortTestHelper::testSort("ShellSort", ShellSort, f);
+	SortTestHelper::testSort("mergeSort", mergeSort, g);
+	SortTestHelper::testSort("heapSort", heapSort, h);
 	//SortTestHelper::testSort("quickSort", quickSort, m);
-	//SortTestHelper::testSort("bucketSort", bucketSort, mm);
+	SortTestHelper::testSort("bucketSort", bucketSort, x);
+
+	clock_t _startTime = clock();
+	sort(y.begin(), y.end());
+	clock_t _endTime = clock();
+	cout << "sort     : " << double(_endTime - _startTime) / CLOCKS_PER_SEC << " s." << endl;
+
+
+	clock_t startTime_ = clock();
+	make_heap(z.begin(), z.end());
+	sort_heap(z.begin(), z.end());
+	clock_t endTime_ = clock();
+	cout << "sort_heap : " << double(endTime_ - startTime_) / CLOCKS_PER_SEC << " s." << endl;
+
 	cout << endl;
 
 
@@ -448,34 +443,49 @@ int _main_sort() {
 	int swapTimes = 100;
 	cout << "Test for Random Nearly Ordered Array, size = " << n << ", swap times = " << swapTimes << endl;
 	a = SortTestHelper::generateNearlyOrderedArray(n, swapTimes);
-	b = c = d = e = f = g = m =mm= a;
-	SortTestHelper::testSort("Bubble_Sort", Bubble_Sort, a);
-	SortTestHelper::testSort("BubbleSort", BubbleSort, b);
-	SortTestHelper::testSort("CocktailSort", CocktailSort, c);
-	SortTestHelper::testSort("selectionSort", selectionSort, d);
-	SortTestHelper::testSort("insertionSort", insertionSort, e);
+	b = c = d = e = f = g = m =x=y=z= a;
 	SortTestHelper::testSort("ShellSort", ShellSort, f);
 	SortTestHelper::testSort("mergeSort", mergeSort, g);
 	SortTestHelper::testSort("heapSort", heapSort, h);
-	SortTestHelper::testSort("quickSort", quickSort, m);
-	SortTestHelper::testSort("bucketSort", bucketSort, mm);
+	//SortTestHelper::testSort("quickSort", quickSort, m);
+	SortTestHelper::testSort("bucketSort", bucketSort, x);
+
+	clock_t startTime_2 = clock();
+	sort(y.begin(), y.end());
+	clock_t endTime_2 = clock();
+	cout << "sort      : " << double(endTime_2 - startTime_2) / CLOCKS_PER_SEC << " s." << endl;
+
+
+	clock_t __startTime = clock();
+	make_heap(z.begin(), z.end());
+	sort_heap(z.begin(), z.end());
+	clock_t __endTime = clock();
+	cout << "sort_heap : " << double(__endTime - __startTime) / CLOCKS_PER_SEC << " s." << endl;
+
 	cout << endl;
 
 
 	//选取[0,10]区间上的数构成大量重复随机数组
 	cout << "Test for Volume Duplicate Random Number, size = " << n << ", Number range [0,10]." << endl;
 	a = SortTestHelper::generateRandomArray(n, 0, 10);
-	b = c = d = e = f = g = m =mm= a;
-	SortTestHelper::testSort("Bubble_Sort", Bubble_Sort, a);
-	SortTestHelper::testSort("BubbleSort", BubbleSort, b);
-	SortTestHelper::testSort("CocktailSort", CocktailSort, c);
-	SortTestHelper::testSort("selectionSort", selectionSort, d);
-	SortTestHelper::testSort("insertionSort", insertionSort, e);
+	b = c = d = e = f = g = m =x=y=z= a;
 	SortTestHelper::testSort("ShellSort", ShellSort, f);
 	SortTestHelper::testSort("mergeSort", mergeSort, g);
 	SortTestHelper::testSort("heapSort", heapSort, h);
-	SortTestHelper::testSort("quickSort", quickSort, m);
-	SortTestHelper::testSort("bucketSort", bucketSort, mm);
+	//SortTestHelper::testSort("quickSort", quickSort, m);
+	SortTestHelper::testSort("bucketSort", bucketSort, x);
+
+	clock_t startTime_3 = clock();
+	sort(y.begin(), y.end());
+	clock_t endTime_3 = clock();
+	cout << "sort    : " << double(endTime_3 - startTime_3) / CLOCKS_PER_SEC << " s." << endl;
+
+	clock_t startTime__ = clock();
+	make_heap(z.begin(), z.end());
+	sort_heap(z.begin(), z.end());
+	clock_t endTime__ = clock();
+	cout << "sort_heap : " << double(endTime__ - startTime__) / CLOCKS_PER_SEC << " s." << endl;
+
 	cout << endl;
 
 
@@ -483,3 +493,33 @@ int _main_sort() {
 	system("pause");
 	return 0;
 }
+
+
+/******************************测试结果************************************
+
+Test for Random Array, size = 100000, random range [0, 100000]
+ShellSort : 1.874 s.
+mergeSort : 1.266 s.
+heapSort : 1.276 s.
+bucketSort : 0.489 s.
+sort     : 0.113 s.
+sort_heap : 0.095 s.
+
+Test for Random Nearly Ordered Array, size = 100000, swap times = 100
+ShellSort : 0.821 s.
+mergeSort : 1.112 s.
+heapSort : 1.336 s.
+bucketSort : 0.37 s.
+sort      : 0.055 s.
+sort_heap : 0.091 s.
+
+Test for Volume Duplicate Random Number, size = 100000, Number range [0,10].
+ShellSort : 0.884 s.
+mergeSort : 1.251 s.
+heapSort : 1.307 s.
+bucketSort : 29.607 s.
+sort    : 0.022 s.
+sort_heap : 0.089 s.
+
+
+**********************************************************************2018*7*2*/
