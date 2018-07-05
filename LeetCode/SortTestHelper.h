@@ -59,7 +59,7 @@ namespace SortTestHelper {
     }
 
     template<typename T>
-    void testSort(const string &sortName, void (*sort)(vector<T>&a), vector<T>&a) {
+    void testSort(const string &sortName, void (*sort)(vector<T>&), vector<T>&a) {
 
         clock_t startTime = clock();
         sort(a);
