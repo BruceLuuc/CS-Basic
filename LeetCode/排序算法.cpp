@@ -394,7 +394,7 @@ void bucketSort(vector<int>&a) {
 
 
 //测试
-int main() {
+int main_sort() {
 
 	int n = 100000;
 

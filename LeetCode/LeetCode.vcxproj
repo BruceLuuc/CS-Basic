@@ -183,6 +183,7 @@
     <ClCompile Include="63. Unique Paths II.cpp" />
     <ClCompile Include="64. Minimum Path Sum.cpp" />
     <ClCompile Include="65. Valid Number.cpp" />
+    <ClCompile Include="66. Plus One.cpp" />
     <ClCompile Include="67. Add Binary.cpp" />
     <ClCompile Include="7. Reverse Integer.cpp" />
     <ClCompile Include="70. Climbing Stairs.cpp" />

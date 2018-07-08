@@ -273,6 +273,9 @@
     <ClCompile Include="排序算法.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="66. Plus One.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SortTestHelper.h">
