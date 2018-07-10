@@ -1,6 +1,6 @@
-#include"x.h"
+﻿#include"x.h"
 
-class Solution {
+class Solution_104 {
 public:
 	int maxDepth(TreeNode* root) {
 		if (root == nullptr)return 0;

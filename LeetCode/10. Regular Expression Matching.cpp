@@ -1,4 +1,4 @@
-#include"x.h"
+﻿#include"x.h"
 
 class Solution_10_1 {
 public:

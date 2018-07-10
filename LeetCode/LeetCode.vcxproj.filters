@@ -141,9 +141,6 @@
     <ClCompile Include="143. Reorder List.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="_test.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="146. LRU Cache.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -274,6 +271,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="66. Plus One.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="_create_List.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="_链表.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="_二叉树.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

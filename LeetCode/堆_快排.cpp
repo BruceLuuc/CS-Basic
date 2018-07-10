@@ -221,7 +221,7 @@ void quickSort(vector<T>&a) {
 
 
 
-int main1() {
+int main1____() {
 	MaxHeap<int>heap(100);
 
 	srand(time(nullptr));

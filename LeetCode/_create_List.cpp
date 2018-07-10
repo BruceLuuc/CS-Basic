@@ -1,6 +1,6 @@
-#include"x.h"
+﻿#include"x.h"
 
-int main_24() {
+ListNode* create_List() {
 	auto g = new ListNode(7);
 	auto f = new ListNode(6, g);
 	auto e = new ListNode(5, f);
@@ -8,11 +8,5 @@ int main_24() {
 	auto c = new ListNode(3, d);
 	auto b = new ListNode(2, c);
 	auto a = new ListNode(1, b);
-
-
-
-
-
-	system("pause");
-	return 0;
+	return a;
 }

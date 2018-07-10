@@ -1,5 +1,6 @@
 ﻿#include"x.h"
 
+
 class Solution_66_1 {
 public:
 	vector<int> plusOne(vector<int>& digits) {
@@ -40,7 +41,9 @@ private:
 	}
 };
 
-int main() {
+
+
+int main_66() {
 	Solution_66_2 A;
 	vector<int>a = { 9,9,9 };
 	a= A.plusOne(a);
@@ -49,6 +52,7 @@ int main() {
 	cout << endl;
 
 	for_each(a.begin(), a.end(), [](int &i) {cout << i << ","; });
+	cout << endl;
 
 
 
