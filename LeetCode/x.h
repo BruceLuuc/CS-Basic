@@ -63,6 +63,10 @@ using std::cout;
 using std::to_string;
 using std::stringstream;
 
+
+#include <iterator>
+using std::iterator_traits;
+
 struct ListNode {
 	int val;
 	ListNode *next;

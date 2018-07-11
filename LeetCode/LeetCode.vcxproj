@@ -170,7 +170,9 @@
     <ClCompile Include="31. Next Permutation.cpp" />
     <ClCompile Include="32. Longest Valid Parentheses.cpp" />
     <ClCompile Include="33. Search in Rotated Sorted Array.cpp" />
+    <ClCompile Include="34. Find First and Last Position of Element in Sorted Array.cpp" />
     <ClCompile Include="343. Integer Break.cpp" />
+    <ClCompile Include="35. Search Insert Position.cpp" />
     <ClCompile Include="4. Median of Two Sorted Arrays.cpp" />
     <ClCompile Include="416. Partition Equal Subset Sum.cpp" />
     <ClCompile Include="43. Multiply Strings.cpp" />
@@ -188,6 +190,7 @@
     <ClCompile Include="7. Reverse Integer.cpp" />
     <ClCompile Include="70. Climbing Stairs.cpp" />
     <ClCompile Include="73. Set Matrix Zeroes.cpp" />
+    <ClCompile Include="74. Search a 2D Matrix.cpp" />
     <ClCompile Include="766. Toeplitz Matrix.cpp" />
     <ClCompile Include="8. String to Integer (atoi).cpp" />
     <ClCompile Include="80. Remove Duplicates from Sorted Array II.cpp" />
