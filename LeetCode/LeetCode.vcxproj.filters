@@ -291,6 +291,36 @@
     <ClCompile Include="74. Search a 2D Matrix.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="_main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="121. Best Time to Buy and Sell Stock.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="122. Best Time to Buy and Sell Stock II.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="123. Best Time to Buy and Sell Stock III.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="188. Best Time to Buy and Sell Stock IV.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="50. Pow(x, n).cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="69. Sqrt(x).cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="344. Reverse String.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="139. Word Break.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="48. Rotate Image.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SortTestHelper.h">
