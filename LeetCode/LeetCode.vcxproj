@@ -158,6 +158,7 @@
     <ClCompile Include="19. Remove Nth Node From End of List.cpp" />
     <ClCompile Include="198. House Robber.cpp" />
     <ClCompile Include="20. Valid Parentheses.cpp" />
+    <ClCompile Include="200. Number of Islands.cpp" />
     <ClCompile Include="206. Reverse Linked List.cpp" />
     <ClCompile Include="21. Merge Two Sorted Lists.cpp" />
     <ClCompile Include="226. Invert Binary Tree.cpp" />
@@ -171,6 +172,7 @@
     <ClCompile Include="279. Perfect Squares.cpp" />
     <ClCompile Include="28. Implement strStr().cpp" />
     <ClCompile Include="2_Add_Two_Numbers.cpp" />
+    <ClCompile Include="3. Longest Substring Without Repeating Characters.cpp" />
     <ClCompile Include="300. Longest Increasing Subsequence.cpp" />
     <ClCompile Include="31. Next Permutation.cpp" />
     <ClCompile Include="32. Longest Valid Parentheses.cpp" />
@@ -183,10 +185,12 @@
     <ClCompile Include="416. Partition Equal Subset Sum.cpp" />
     <ClCompile Include="43. Multiply Strings.cpp" />
     <ClCompile Include="437. Path Sum III.cpp" />
+    <ClCompile Include="45. Jump Game II.cpp" />
     <ClCompile Include="48. Rotate Image.cpp" />
     <ClCompile Include="5. Longest Palindromic Substring.cpp" />
     <ClCompile Include="50. Pow(x, n).cpp" />
     <ClCompile Include="53. Maximum Subarray.cpp" />
+    <ClCompile Include="55. Jump Game.cpp" />
     <ClCompile Include="60. Permutation Sequence.cpp" />
     <ClCompile Include="61. Rotate List.cpp" />
     <ClCompile Include="62. Unique Paths.cpp" />
@@ -201,6 +205,7 @@
     <ClCompile Include="73. Set Matrix Zeroes.cpp" />
     <ClCompile Include="74. Search a 2D Matrix.cpp" />
     <ClCompile Include="766. Toeplitz Matrix.cpp" />
+    <ClCompile Include="79. Word Search.cpp" />
     <ClCompile Include="8. String to Integer (atoi).cpp" />
     <ClCompile Include="80. Remove Duplicates from Sorted Array II.cpp" />
     <ClCompile Include="82. Remove Duplicates from Sorted List II.cpp" />
@@ -217,7 +222,6 @@
     <ClCompile Include="96. Unique Binary Search Trees.cpp" />
     <ClCompile Include="x.h" />
     <ClCompile Include="_create_List.cpp" />
-    <ClCompile Include="_main.cpp" />
     <ClCompile Include="_二叉树.cpp" />
     <ClCompile Include="_链表.cpp" />
     <ClCompile Include="堆_快排.cpp" />

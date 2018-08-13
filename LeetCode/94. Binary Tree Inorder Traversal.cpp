@@ -1,12 +1,12 @@
-#include"x.h"
+ï»¿#include"x.h"
 
-//ÖĞĞò±éÀú
-//µİ¹é
+//ä¸­åºéå†
+//é€’å½’
 class Solution_94_1 {
 public:
-	vector<int>result;
 	vector<int> inorderTraversal(TreeNode* root) {
-		if (root) {
+		vector<int>result;
+		if (root!=nullptr) {
 			inorderTraversal(root->left);
 			result.push_back(root->val);
 			inorderTraversal(root->right);
@@ -15,7 +15,7 @@ public:
 	}
 };
 
-//Ê¹ÓÃÕ»
+//ä½¿ç”¨æ ˆ
 class Solution_94_2 {
 public:
 	vector<int> inorderTraversal(TreeNode *root) {
@@ -53,16 +53,16 @@ public:
 				cur = cur->right;
 			}
 			else {
-				/*²éÕÒÇ°Çı */
+				/*æŸ¥æ‰¾å‰é©± */
 				TreeNode *node = cur->left;
 				while (node->right  && node->right != cur)
 					node = node->right;
-				if (node->right == nullptr) { /* »¹Ã»ÏßË÷»¯£¬Ôò½¨Á¢ÏßË÷ */
+				if (node->right == nullptr) { /* è¿˜æ²¡çº¿ç´¢åŒ–ï¼Œåˆ™å»ºç«‹çº¿ç´¢ */
 					node->right = cur;
-					/* prev = cur; ²»ÄÜÓĞÕâ¾ä£¬cur »¹Ã»ÓĞ±»·ÃÎÊ */
+					/* prev = cur; ä¸èƒ½æœ‰è¿™å¥ï¼Œcur è¿˜æ²¡æœ‰è¢«è®¿é—® */
 					cur = cur->left;
 				}
-				else { /* ÒÑÏßË÷»¯£¬ÔòÉ¾³ıÏßË÷ */
+				else { /* å·²çº¿ç´¢åŒ–ï¼Œåˆ™åˆ é™¤çº¿ç´¢ */
 					result.push_back(cur->val);
 					node->right = nullptr;
 					prev = cur;

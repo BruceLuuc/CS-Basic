@@ -291,9 +291,6 @@
     <ClCompile Include="74. Search a 2D Matrix.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="_main.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="121. Best Time to Buy and Sell Stock.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -319,6 +316,21 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="48. Rotate Image.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="55. Jump Game.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="45. Jump Game II.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Longest Substring Without Repeating Characters.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="200. Number of Islands.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="79. Word Search.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
