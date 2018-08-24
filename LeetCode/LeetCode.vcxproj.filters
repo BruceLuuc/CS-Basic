@@ -333,6 +333,9 @@
     <ClCompile Include="79. Word Search.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="240. Search a 2D Matrix II.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SortTestHelper.h">

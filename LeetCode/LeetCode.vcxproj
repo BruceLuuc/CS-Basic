@@ -165,6 +165,7 @@
     <ClCompile Include="23. Merge k Sorted Lists.cpp" />
     <ClCompile Include="235. Lowest Common Ancestor of a Binary Search Tree.cpp" />
     <ClCompile Include="24. Swap Nodes in Pairs.cpp" />
+    <ClCompile Include="240. Search a 2D Matrix II.cpp" />
     <ClCompile Include="25. Reverse Nodes in k-Group.cpp" />
     <ClCompile Include="257. Binary Tree Paths.cpp" />
     <ClCompile Include="26. Remove Duplicates from Sorted Array.cpp" />
