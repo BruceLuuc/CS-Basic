@@ -192,6 +192,7 @@
     <ClCompile Include="50. Pow(x, n).cpp" />
     <ClCompile Include="53. Maximum Subarray.cpp" />
     <ClCompile Include="55. Jump Game.cpp" />
+    <ClCompile Include="560. Subarray Sum Equals K.cpp" />
     <ClCompile Include="60. Permutation Sequence.cpp" />
     <ClCompile Include="61. Rotate List.cpp" />
     <ClCompile Include="62. Unique Paths.cpp" />

@@ -123,7 +123,7 @@ int LCS_2(string s1, string s2) {
 }
 
 
-int main() {
+int m3ain() {
 //Y:  char c;
 //	scanf_s("%c", &c);
 //	switch (c){
