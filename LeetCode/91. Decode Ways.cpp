@@ -1,14 +1,14 @@
-#include"x.h"
+ï»¿#include"x.h"
 
 
-//¿´²»¶®
+
 class Solution_91 {
 public:
 	int numDecodings(string s) {
 		if (s.empty() || s[0] == '0') return 0;
 		int prev = 0;
 		int cur = 1;
-		// ³¤¶ÈÎªnµÄ×Ö·û´®£¬ÓÐ n+1 ¸ö½×ÌÝ
+		// é•¿åº¦ä¸ºnçš„å­—ç¬¦ä¸²ï¼Œæœ‰ n+1 ä¸ªé˜¶æ¢¯
 		for (size_t i = 1; i <= s.size(); ++i) {
 			if (s[i - 1] == '0') cur = 0;
 			if (i < 2 || !(s[i - 2] == '1' || (s[i - 2] == '2' && s[i - 1] <= '6')))
