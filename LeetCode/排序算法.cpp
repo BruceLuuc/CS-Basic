@@ -281,7 +281,7 @@ void quickSort(vector<T>&a, int left, int right) {
 		int j = right - 2;
 		for (;;) {
 			while (a[i] < pivot)i++;
-			while (pivot < a[j])j++;
+			while (pivot < a[j])j--;
 			if (i < j)swap(a[i], a[j]);
 			else break;
 		}
@@ -420,7 +420,7 @@ int main_sort() {
 	SortTestHelper::testSort("ShellSort", ShellSort, f);
 	SortTestHelper::testSort("mergeSort", mergeSort, g);
 	SortTestHelper::testSort("heapSort", heapSort, h);
-	//SortTestHelper::testSort("quickSort", quickSort, m);
+	SortTestHelper::testSort("quickSort", quickSort, m);
 	SortTestHelper::testSort("bucketSort", bucketSort, x);
 
 	clock_t _startTime = clock();
@@ -447,7 +447,7 @@ int main_sort() {
 	SortTestHelper::testSort("ShellSort", ShellSort, f);
 	SortTestHelper::testSort("mergeSort", mergeSort, g);
 	SortTestHelper::testSort("heapSort", heapSort, h);
-	//SortTestHelper::testSort("quickSort", quickSort, m);
+	SortTestHelper::testSort("quickSort", quickSort, m);
 	SortTestHelper::testSort("bucketSort", bucketSort, x);
 
 	clock_t startTime_2 = clock();
