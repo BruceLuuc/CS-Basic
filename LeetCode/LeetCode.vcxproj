@@ -167,6 +167,7 @@
     <ClCompile Include="24. Swap Nodes in Pairs.cpp" />
     <ClCompile Include="240. Search a 2D Matrix II.cpp" />
     <ClCompile Include="25. Reverse Nodes in k-Group.cpp" />
+    <ClCompile Include="253. Meeting Rooms II.cpp" />
     <ClCompile Include="257. Binary Tree Paths.cpp" />
     <ClCompile Include="26. Remove Duplicates from Sorted Array.cpp" />
     <ClCompile Include="27. Remove Element.cpp" />
@@ -176,6 +177,7 @@
     <ClCompile Include="3. Longest Substring Without Repeating Characters.cpp" />
     <ClCompile Include="300. Longest Increasing Subsequence.cpp" />
     <ClCompile Include="31. Next Permutation.cpp" />
+    <ClCompile Include="319. Bulb Switcher.cpp" />
     <ClCompile Include="32. Longest Valid Parentheses.cpp" />
     <ClCompile Include="33. Search in Rotated Sorted Array.cpp" />
     <ClCompile Include="34. Find First and Last Position of Element in Sorted Array.cpp" />
