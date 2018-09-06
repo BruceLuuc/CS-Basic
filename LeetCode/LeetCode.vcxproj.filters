@@ -339,6 +339,9 @@
     <ClCompile Include="560. Subarray Sum Equals K.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="718. Maximum Length of Repeated Subarray.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SortTestHelper.h">
