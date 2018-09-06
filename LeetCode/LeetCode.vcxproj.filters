@@ -342,6 +342,9 @@
     <ClCompile Include="718. Maximum Length of Repeated Subarray.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="6. ZigZag Conversion.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SortTestHelper.h">
