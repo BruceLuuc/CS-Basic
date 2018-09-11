@@ -20,7 +20,8 @@ private:
 		if (board[x][y] != word[index])return false;//不相等 剪枝
 
 		visited[x][y] = true;
-		bool ret = dfs(board, word, index + 1, x - 1, y, visited) ||
+		bool ret = 
+			dfs(board, word, index + 1, x - 1, y, visited) ||
 			dfs(board, word, index + 1, x + 1, y, visited) ||
 			dfs(board, word, index + 1, x, y - 1, visited) ||
 			dfs(board, word, index + 1, x, y + 1, visited);
@@ -47,7 +48,8 @@ protected:
 		if (board[i][j] != word[index]) return false; // do not match
 													  // match!
 		board[i][j] = '*'; // change the content, to avoid duplicated search
-		bool furtherSearch = adjacentSearch(board, word, i + 1, j, index + 1) || // up
+		bool furtherSearch = 
+			adjacentSearch(board, word, i + 1, j, index + 1) || // up
 			adjacentSearch(board, word, i - 1, j, index + 1) || // down
 			adjacentSearch(board, word, i, j - 1, index + 1) || // left
 			adjacentSearch(board, word, i, j + 1, index + 1);   // right

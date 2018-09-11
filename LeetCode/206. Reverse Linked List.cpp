@@ -1,11 +1,11 @@
-#include"x.h"
+﻿#include"x.h"
 
 
 //递推
 class Solution_206_1 {
 public:
 	ListNode * reverseList(ListNode* head) {
-		if (head == nullptr)
+		if (head == nullptr || head->next == nullptr)
 			return nullptr;
 
 		ListNode *pCur, *pPre, *pNext;
