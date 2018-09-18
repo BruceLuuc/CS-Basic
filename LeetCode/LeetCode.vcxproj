@@ -228,6 +228,7 @@
     <ClCompile Include="95. Unique Binary Search Trees II.cpp" />
     <ClCompile Include="96. Unique Binary Search Trees.cpp" />
     <ClCompile Include="x.h" />
+    <ClCompile Include="_classical_problems.cpp" />
     <ClCompile Include="_create_List.cpp" />
     <ClCompile Include="_二叉树.cpp" />
     <ClCompile Include="_链表.cpp" />
