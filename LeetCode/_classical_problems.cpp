@@ -4,16 +4,15 @@
 int maxSum(const vector<int>&nums) {
 	int result = INT_MIN;
 	int tmpSum = 0;
-	for (int i = 0; i < nums.size(); i++) {
-		tmpSum += nums[i];
-		if (tmpSum > result)
-			result = tmpSum;
-		else if (tmpSum < 0)
+	for (auto i : nums) {
+		tmpSum += i;
+		result = max(result, tmpSum);
+		if (tmpSum < 0)
 			tmpSum = 0;
 	}
 	return result;
 }
-int maxSubArray(vector<int>& nums) {
+int maxSubArray(const vector<int>& nums) {
 	int result = INT_MIN;
 	int tmpSum = 0;
 	for (auto i : nums) {
