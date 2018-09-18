@@ -351,6 +351,9 @@
     <ClCompile Include="319. Bulb Switcher.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="611. Valid Triangle Number.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SortTestHelper.h">

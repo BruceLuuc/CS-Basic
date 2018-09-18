@@ -198,6 +198,7 @@
     <ClCompile Include="6. ZigZag Conversion.cpp" />
     <ClCompile Include="60. Permutation Sequence.cpp" />
     <ClCompile Include="61. Rotate List.cpp" />
+    <ClCompile Include="611. Valid Triangle Number.cpp" />
     <ClCompile Include="62. Unique Paths.cpp" />
     <ClCompile Include="63. Unique Paths II.cpp" />
     <ClCompile Include="64. Minimum Path Sum.cpp" />
