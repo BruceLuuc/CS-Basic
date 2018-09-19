@@ -357,6 +357,9 @@
     <ClCompile Include="_classical_problems.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="46. Permutations.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SortTestHelper.h">
