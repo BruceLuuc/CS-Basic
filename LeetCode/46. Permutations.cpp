@@ -145,3 +145,27 @@ public:
 		return res;
 	}
 };
+
+
+//全部组合数 77. Combinations
+class Solution_77 {
+public:
+	vector<vector<int>> combine(int n, int k) {
+		vector<vector<int>>result;
+		vector<int>path;
+		dfs(n, k, 1, 0, path, result);//从1开始1,2,3,4,...,n
+		return result;
+	}
+private:
+	static void dfs(int n, int k, int start, int cur, vector<int>&path, vector<vector<int>>&result) {
+		if (cur == k) {
+			result.push_back(path);
+			return;
+		}
+		for (int i = start; i <= n; i++) {
+			path.push_back(i);
+			dfs(n, k, i + 1, cur + 1, path, result);
+			path.pop_back();
+		}
+	}
+};

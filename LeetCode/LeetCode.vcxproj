@@ -213,6 +213,7 @@
     <ClCompile Include="73. Set Matrix Zeroes.cpp" />
     <ClCompile Include="74. Search a 2D Matrix.cpp" />
     <ClCompile Include="766. Toeplitz Matrix.cpp" />
+    <ClCompile Include="77. Combinations.cpp" />
     <ClCompile Include="79. Word Search.cpp" />
     <ClCompile Include="8. String to Integer (atoi).cpp" />
     <ClCompile Include="80. Remove Duplicates from Sorted Array II.cpp" />

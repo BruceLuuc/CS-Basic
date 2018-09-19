@@ -360,6 +360,9 @@
     <ClCompile Include="46. Permutations.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="77. Combinations.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SortTestHelper.h">
