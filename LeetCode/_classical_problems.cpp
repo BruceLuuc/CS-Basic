@@ -83,3 +83,23 @@ public:
 		return result;
 	}
 };
+
+
+
+
+//# LCS #最长公共子序列(Longest-Common-Subsequence)
+//动态规划问题
+int LCS_length(const string& x, const string& y) {
+	const int m = x.size();
+	const int n = y.size();
+	if (m == 0 || n == 0)return 0;
+	vector<vector<int>>f(m + 1, vector<int>(n + 1, 0));
+	for(int i=1;i<=m;i++)
+		for (int j = 1; j <= n; j++) {
+			if (x[i] == y[j])
+				f[i][j] = f[i - 1][j - 1] + 1;
+			else
+				f[i][j] = max(f[i][j - 1], f[i - 1][j]);
+		}
+	return f[m][n];
+}
