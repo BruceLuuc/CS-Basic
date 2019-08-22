@@ -94,7 +94,7 @@ int pthreadGetPriorityScope(int *minPriority, int *maxPriority){
     return 0;
 }
 
-static int setPthreadAttr(pthread_attr_t *attr, int priority, size_t* stacksize{
+static int setPthreadAttr(pthread_attr_t *attr, int priority, size_t* stacksize){
     int rval;
     struct sched_param	params;
     int maxPriority, minPriority;
