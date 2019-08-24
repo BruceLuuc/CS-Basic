@@ -1,4 +1,4 @@
-[TOC]
+
 
 #### <center> 第1章 `UNIX`基础知识 </center>
 
@@ -278,16 +278,98 @@ S_IXOTH | other-execute
 
 
 
-
-
-
-
-
-
-
-
 #### <center> 第5章 标准`I/O`库 </center>
 
+#### 5.1 引言
+本章讲述标准I/O库，标准I/O库是由Dennis Ritchie在1975年左右编写的，令人惊讶的是，45年来，几乎没有对标准I/O库进行修改。
+#### 5.2 流和FILE对象
+当用标准I/O库打开或创建一个文件时，我们已使一个流与一个文件相关联。
+只有两个函数可改变流的定向。freopen函数清除一个流的定向，fwide函数可用于设置流的定向。
+#### 5.4 缓冲
+标准I/O库提供缓冲的目的是尽可能减少使用read和write调用的次数。
+标准I/O提供了3种类型的缓冲。
+1）全缓冲。填满标准I/O缓冲区后才进行实际I/O操作。
+2）行缓冲。当在输入和输出中遇到换行符时，标准I/O库执行I/O操作。终端通常使用行缓冲。
+3）不带缓冲。标准错误流stderr通常是不带缓冲的，这样错误信息就可以尽快显现出来。
+```C
+#include <stdio.h>
+void setbuf(FILE *restrict fp, char *restrict buf);
+int setvbuf(FILE *restrict fp, char *restrict buf, int mode,size_t size);
+/* 成功返回0；出错返回非0 */
+```
+可以使用setbuf函数打开或关闭缓冲机制，参数buf必须指向一个长度为BUFSIZE的缓冲区(定义在<stdio.h>)，通常此后该流就是全缓冲的。关闭缓冲，将buf设置为NULL.
+使用setvbuf，可以精确地说明所需的缓冲类型，用mode参数实现。
+任何时候我们都可以强制冲洗一个流
+```C
+#include <stdio.h>
+int fflush(FILE *fp);
+/** 成功返回0；出错返回EOF **/
+```
+
+
+#### 5.5 打开流
+```C
+#include <stdio.h>
+FILE *fopen(const char *restrict pathname, const char *restrict type);
+FILE *freopen(const char *restrict pathname, const char *restrict type, FILE *restrict fp);
+FILE *fdopen(int fd,const char *type);
+/** 成功返回文件指针，出错返回NULL **/
+```
+fdopen函数取一个已有的文件描述符，并使一个标准的I/O流与该描述符相结合。常用于由创建管道和网络通信通道函数返回的描述符。
+调用fclose关闭一个打开的流。
+```C
+#include <stdio.h>
+int fclose(FILE *fp);
+```
+
+#### 5.6 读和写流
+一旦打开了流，则可在3种不同类型的非格式化I/O中进行选择。
+1）每次一个字符的I/O。
+2）每次一行的I/O。
+3）直接I/O。
+
+以下三个函数可用于一次读一个字符。
+```C
+#include <stdio.h>
+int getc(FILE *fp);
+int fgetc(FILE *fp);
+int getchar(void);
+/** **/
+```
+函数getchar等同于getc(stdin),getc可被实现为宏，fgetc不能。
+
+对应上面所述的每个输入函数都有一个输出函数：
+```C
+#include <stdio.h>
+int putc(int c, FILE *fp);
+int fputc(int c,FILE *fp);
+int putchar(int c);
+```
+
+#### 5.7 每次一行I/O
+
+```C
+#include <stdio.h>
+char *fgets(char *restrict buf, int n, FILE *restrict fp);
+char *gets(char *buf);
+/** 成功返回buf，若已到达文件尾端或出错，返回NULL **/
+```
+
+这两个函数都指定了缓冲区的地址，读入的行送入其中。
+gets从标准输入读，fgets从指定的流读。
+gets是一个不推荐使用的函数，可能造成缓冲区溢出。
+
+fputs和puts提供每次输出一行的功能。
+```C
+#include <stdio.h>
+int fputs(const char *restrict str, FILE *restrict fp);
+int puts(const char *str);
+```
+#### 5.9 二进制I/O
+```C
+size_t fread(void *restrict ptr, size_t size,size_t nobj,FILE *restrict fp);
+size_t fwrite(const void *restrict ptr,size_t size,size_t nobj, FILE *restrict fp);
+```
 
 
 
@@ -301,30 +383,171 @@ S_IXOTH | other-execute
 
 
 
-#### <center> 第6章 系统数据文件和信息 </center>
+
+
+
+#### <center> 第7章 进程环境 </center>
+#### 7.2 main函数
+C程序总是从main函数开始执行，main函数原型是：
+
+```C
+int main(int argc, char *argv[]);
+```
+`argc`是命令行参数的数目，`argv`是指向参数的各个指针所构成的数组。
+
+#### 7.3 进程终止
+`_exit`和`_Exit`立即进入内核，`exit`则先执行一些清理处理，然后返回内核。
+`main`函数返回一个整型值与用该值调用`exit`是等价的。
+
+`exit(0);`等价于`return (0);`
+
+#### 7.5 环境表
+每个程序都接收到一张环境表，环境表也是一个字符指针数组。
+
+#### 7.6 `C`程序的存储空间布局
+- 正文段。CPU执行的机器指令部分。
+
++ 初始化数据段。
+- 未初始化数据段。`BSS`段，`block started by symbol`
+- 栈。
+- 堆。堆位于未初始化数据段和栈之间。
+
+
+#### <center> 第8章 进程控制 </center>
+
+##### 8.2 进程标识
+ID为0的进程通常是调度进程，常常被称为交换进程(`swapper`)。该进程是内核的一部分，它并不执行任何磁盘上的程序，因此也被称为系统进程。进程ID 1通常是init进程，在自举过程结束时由内核调用。
+
+```C
+#include <unistd.h>
+pid_t getpid(void);  //返回值：调用进程的进程ID
+pid_t getppid(void); //返回值：调用进程的父进程ID
+```
+
+##### 8.3 函数`fork`
+
+一个现有的进程可以调用`fork`函数创建一个新进程。
+```C
+#include <unistd.h>
+pid_t fork(void);
+//返回值：子进程返回0，父进程返回子进程ID；若出错，返回-1
+```
+`fork`函数被调用一次，但返回两次。父进程和子进程共享正文段，子进程获得父进程数据空间、堆、和栈的副本。
+一般来说，在fork之后是父进程先执行还是子进程先执行是不确定的，这取决于内核所使用的调度算法。
+
+- `strlen()`不包含终止null字节的字符长度。
+- `sizeof()`包括null.
+
+父进程和子进程共享一个文件偏移量。
+
+fork有以下两种用法。
+
+1）一个父进程希望复制自己，使父进程和子进程同时执行不同的代码。
+
+2）一个进程要执行一个不同的程序。`shell`，子进程从`fork`返回后立即调用`exec`。
+
+#### 8.4 函数vfork
+可移植的应用程序不应该使用这个函数。
+
+`vfork`函数用于创建一个新进程，而该新进程的目的是`exec`一个新程序。shell的基本部分就是这样。
+
+`vfork`保证子进程先运行，在它调用`exec`或`exit`之后父进程才可能被调度运行。
+对于父进程已终止的所有进程，它的父进程都改变为init进程，我们称这些进程由init进程收养。
+
+内核为每个终止进程保存了一定量的信息，所以当终止进程的父进程调用`wait`或`waitpi`d时，可以得到这些信息。
+
+
+
+#### 8.6 函数`wait`和`waitpid`
+
+当一个进程正常或异常终止时，内核就向其父进程发送`SIGCHLD`信号。
+```C
+#include <sys/wait.h>
+pid_t wait(int *statloc);
+pid_t waitpid(pid_t pid, int *statloc, int options);
+```
+#### 8.10 函数`exec`
+当进程调用一种`exec`函数时，该进程执行的程序完全替换为新程序，而新程序则从其`main`函数开始执行。`exec`只是用磁盘上的一个新程序替换了当前进程的正文段、数据段、堆段和栈段。
 
 
 
 
 
 
+#### <center> 第10章 信号 </center>
+
+#### 10.1 引言
+信号是软件中断。很多比较重要的应用程序都需要处理信号。信号提供了一种处理异步事件的方法。
+#### 10.2 信号的概念
+在头文件`<signal.h>`中，信号名都被定义为正整数常量(信号编号)。
+
+很多条件可以产生信号：
+- 按终止键。
+- 硬件异常产生信号：除数为0、无效内存引用。
+- 进程调用`kill(2)`函数可将任意信号发送给另一个进程或进程组。
+- 用户可用`Kill(1)`命令将信号发送给其他进程。此命令只是`kill`函数的接口。常用此命令终止一个失控的后台进程。
+- 当检测到某种软件条件已经发生，并将其通知有关进程时也产生信号。例如`SIGURG`(在网络连接上传来带外的数据)、`SIGPIPE`(在管道的读进程已终止后，一个进程写此管道)以及`SIGALRM`(进程所设置的定时器已经超时)。
+
+信号是异步事件的经典实例。产生信号的事件对进程而言是随机出现的。在某个信号出现时，可以告诉内核按下列3种方式之一进行处理：
+
+（1）忽略此信号。`SIGKILL`和`SIGSTOP`不能被忽略，他俩向内核和超级用户提供了使进程终止或停止的可靠方法。
+
+（2）捕捉信号。为了做到这一点，要通知内核在某种信号发生时，调用一个用户函数。注意，不能捕捉`SIGKILL`和`SIGSTOP`信号。
+
+（3）执行系统默认动作。绝大多数信号的系统默认动作是终止该进程。
+
+#### 10.3 函数`signal`
+UNIX系统信号机制最简单的接口是`signal`函数。
+```C
+#include <signal.h>
+void (*signal(int signo, void (*func)(int)))(int);
+                        成功返回以前的信号处理配置，出错返回SIG_ERR
+```
 
 
 
+#### 10.6 可重入函数
+`Single UNIX Specification` 说明了在信号处理程序中保证调用安全的函数。这些函数是可重入的并被称为是异步信号安全的。除了可重入以外，在信号处理操作期间，它会阻塞任何会引起不一致的信号发送。
+不可重入函数的几个特性：
+1. 使用静态数据结构
+2. 调用`malloc`或`free`
+3. 是标准I/O函数。标准I/O库的很多实现都以不可重入方式使用全局数据结构。
+
+
+#### 10.9 函数`kill`和`raise`
+
+`kill`函数将信号发送给进程或进程组。`raise`函数则允许进程向自身发送信号。
+```C
+#include <signal.h>
+int kill(pid_t pid, int signo);
+int raise(int signo);
+                    //OK return 0;  Error return -1
+```
+
+调用`raise(signo);`等价于调用`kill(getpid(), signo);`
+
+kill的pid参数有以下4种不同情况：
+
+-    `pid>0`   将该信号发送给进程ID为pid的进程。
+-    `pid==0`  发送给同一进程组的所有进程。
+-    `pid<0 `  发送给ID等于pid绝对值，而且发送进程具有权限向其发送信号的所有进程。
+-    `pid==-1` 将信号发送给发送进程有权限向他们发送信号的所有进程。
 
 
 
+#### 10.10 函数`alarm`和`pause`
+使用`alarm`函数可以设定一个定时器(闹钟时间)，在将来的某个时刻该定时器会超时。当定时器超时时，产生`SIGALRM`信号。如果忽略或不捕捉此信号，则其默认动作是终止调用该`alarm`函数的进程。
 
+```C
+#include <unistd.h>
+unsigned int alarm(unsigned int seconds);
+```
+每个进程只能有一个闹钟时间。
 
-
-
-
-
-
-
-
-
-
-
-
+`pause`函数使调用进程挂起直至捕捉到一个信号。
+```C
+#include <unistd.h>
+int pause(void);
+```
+只有执行了一个信号处理程序并从其返回时，`pause`才返回。在这种情况下，`pause`返回-1，`errno`设置为`EINTR`。
 
